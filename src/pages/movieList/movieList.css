@@ -1,0 +1,24 @@
+.movieList{
+    flex: 4;
+    padding: 30px;
+}
+.movieAction:hover{
+ background-color: rgb(241, 240, 237);
+ transition: all 300ms ease-in-out;
+}
+.ActionIcon{
+    margin-left: 6px;
+    cursor: pointer;
+}
+.ActionIcon.editAction{
+ color: rgb(106, 92, 1);
+}
+.ActionIcon.editAction:hover{
+    color: rgb(243, 211, 7);
+}
+.ActionIcon.deleteAction{
+    color: rgb(134, 2, 2);
+}
+.ActionIcon.deleteAction:hover{
+    color: rgb(213, 1, 1);
+}

@@ -1,0 +1,8 @@
+.userList{
+    flex: 4;
+    padding: 30px;
+}
+.navLink{
+    text-decoration: none;
+    color: #555
+}
