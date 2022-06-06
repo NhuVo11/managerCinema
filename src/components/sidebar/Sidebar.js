@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 
 function Sidebar() {
+  const [active, setActive] = useState(1);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -13,7 +14,10 @@ function Sidebar() {
           <h3 className="siderbarTitleAvavatar">Hello Admin</h3>
           <ul className="sidebarList">
             <Link to="/" className="navLink">
-              <li className="sidebarListItem active">
+              <li
+                onClick={() => setActive(1)}
+                className={`sidebarListItem ${active === 1 ? "active" : ""}`}
+              >
                 <span className="sidebarIcon">
                   <i className="bi bi-bar-chart-line"></i>
                 </span>
@@ -21,7 +25,10 @@ function Sidebar() {
               </li>
             </Link>
             <Link to="/users" className="navLink">
-              <li className="sidebarListItem">
+              <li
+                onClick={() => setActive(2)}
+                className={`sidebarListItem ${active === 2 ? "active" : ""}`}
+              >
                 <span className="sidebarIcon">
                   <i className="bi bi-person"></i>
                 </span>
@@ -29,7 +36,10 @@ function Sidebar() {
               </li>
             </Link>
             <Link to="/movies" className="navLink">
-              <li className="sidebarListItem">
+              <li
+                onClick={() => setActive(3)}
+                className={`sidebarListItem ${active === 3 ? "active" : ""}`}
+              >
                 <span className="sidebarIcon">
                   <i className="bi bi-film"></i>
                 </span>

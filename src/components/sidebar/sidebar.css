@@ -42,6 +42,7 @@
 .sidebarListItem.active, .sidebarListItem:hover{
     background-color: rgb(255, 226, 226);
     color: #555;
+    transition: all 300ms ease-in-out;
 }
 .sidebarIcon{
     margin-right: 15px;

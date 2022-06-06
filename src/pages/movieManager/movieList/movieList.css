@@ -2,6 +2,12 @@
     flex: 4;
     padding: 30px;
 }
+.bg-custom-1 {
+    background-color: #85144b;
+  }
+.bg-custom-2 {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
 .movieAction:hover{
  background-color: rgb(241, 240, 237);
  transition: all 300ms ease-in-out;

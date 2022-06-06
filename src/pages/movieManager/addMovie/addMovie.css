@@ -1,0 +1,54 @@
+.addMovie{
+    flex: 4;
+    padding: 30px;
+}
+.newMovieForm{
+    display: flex;
+    flex-wrap: wrap;
+}
+.newMovieItem{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.newMovieItem>label{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(159, 156, 156);
+}
+.newMovieItem>input{
+    height: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.newMovieItem>textarea{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.newMovieButton{
+    width: 150px;
+    border: none;
+    background-color: rgb(255, 150, 150);
+    color: white;
+    padding: 7px 30px;
+    font-size: 600 ;
+    border-radius: 10px ;
+    margin-left: 20px;
+}
+.newMovieButton:hover{
+    background-color: rgb(250, 92, 92);
+}
+.newMovieButton.cancel{
+    background-color: rgb(110, 194, 250);
+    text-decoration: none;
+    color: white;
+    padding-left: 50px;
+}
+.newMovieButton.cancel:hover{
+    background-color: rgb(35, 162, 246);
+}

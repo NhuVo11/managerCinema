@@ -2,10 +2,12 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./App.css";
 import Home from "./pages/home/Home";
-import UserList from "./pages/userList/UserList";
-import MovieList from "./pages/movieList/MovieList";
+import UserList from "./pages/UserManager/userList/UserList";
+import MovieList from "./pages/movieManager/movieList/MovieList";
 
 import { Route, Routes } from "react-router-dom";
+import MovieEdit from "./pages/movieManager/mobieEdit/MovieEdit";
+import AddMovie from "./pages/movieManager/addMovie/AddMovie";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/movies" element={<MovieList />} />
+          <Route path="/movies/edit/:id" element={<MovieEdit />} />
+          <Route path="/movies/add" element={<AddMovie />} />
         </Routes>
       </div>
     </div>
