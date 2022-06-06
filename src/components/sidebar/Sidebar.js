@@ -46,6 +46,17 @@ function Sidebar() {
                 Movie
               </li>
             </Link>
+            <Link to="/rooms" className="navLink">
+              <li
+                onClick={() => setActive(4)}
+                className={`sidebarListItem ${active === 4 ? "active" : ""}`}
+              >
+                <span className="sidebarIcon">
+                  <i className="bi bi-grid-3x3-gap"></i>
+                </span>
+                Rooms
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -8,6 +8,7 @@ import MovieList from "./pages/movieManager/movieList/MovieList";
 import { Route, Routes } from "react-router-dom";
 import MovieEdit from "./pages/movieManager/mobieEdit/MovieEdit";
 import AddMovie from "./pages/movieManager/addMovie/AddMovie";
+import RoomList from "./pages/RoomManager/roomList/RoomList";
 
 function App() {
   return (
@@ -18,9 +19,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<UserList />} />
+
           <Route path="/movies" element={<MovieList />} />
           <Route path="/movies/edit/:id" element={<MovieEdit />} />
           <Route path="/movies/add" element={<AddMovie />} />
+
+          <Route path="/rooms" element={<RoomList />} />
         </Routes>
       </div>
     </div>
