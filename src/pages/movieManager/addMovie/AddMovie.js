@@ -12,7 +12,6 @@ function AddMovie() {
   const [description, setDescription] = useState("");
 
   const handleAdd = () => {
-    // const dateFormat = startDate.format("YYYY-MM-DD");
     const movie = {
       name: name,
       director: director,
@@ -41,6 +40,7 @@ function AddMovie() {
             placeholder="DORAEMON: NOBITA VÀ CUỘC CHIẾN ..."
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div className="newMovieItem">
@@ -50,6 +50,7 @@ function AddMovie() {
             placeholder="Animation Japan"
             value={director}
             onChange={(e) => setDirector(e.target.value)}
+            required
           />
         </div>
         <div className="newMovieItem">
@@ -59,15 +60,17 @@ function AddMovie() {
             placeholder="109"
             value={duration}
             onChange={(e) => setDuration(e.target.value)}
+            required
           />
         </div>
         <div className="newMovieItem">
-          <label>Start date":</label>
+          <label>Start date:</label>
           <input
             type="text"
             placeholder="26/05/2022"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
+            required
           />
         </div>
         <div className="newMovieItem">
@@ -77,6 +80,7 @@ function AddMovie() {
             placeholder="https://media.lottecinemavn.com/Media/MovieFile/MovieMedia/202205/10882_301_100001.mp4"
             value={trailer}
             onChange={(e) => setTrailer(e.target.value)}
+            required
           />
         </div>
         <div className="newMovieItem">
@@ -87,6 +91,7 @@ function AddMovie() {
             placeholder="Nobita tình cờ gặp được người ngoài hành tinh tí hon Papi...."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required
           />
         </div>
         <button className="newMovieButton" onClick={handleAdd}>
