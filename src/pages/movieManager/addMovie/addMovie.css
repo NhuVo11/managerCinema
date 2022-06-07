@@ -2,35 +2,35 @@
     flex: 4;
     padding: 30px;
 }
-.newMovieForm{
+.newForm{
     display: flex;
     flex-wrap: wrap;
 }
-.newMovieItem{
+.newItem{
     width: 400px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
     margin-left: 20px;
 }
-.newMovieItem>label{
+.newItem>label{
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
     color: rgb(159, 156, 156);
 }
-.newMovieItem>input{
+.newItem>input{
     height: 20px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
 }
-.newMovieItem>textarea{
+.newItem>textarea{
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
 }
-.newMovieButton{
+.newButton{
     width: 150px;
     border: none;
     background-color: rgb(255, 150, 150);
@@ -39,16 +39,18 @@
     font-size: 600 ;
     border-radius: 10px ;
     margin-left: 20px;
+    margin-top: 20px;
 }
-.newMovieButton:hover{
+.newButton:hover{
     background-color: rgb(250, 92, 92);
 }
-.newMovieButton.cancel{
+.newButton.cancel{
     background-color: rgb(110, 194, 250);
     text-decoration: none;
     color: white;
     padding-left: 50px;
+    
 }
-.newMovieButton.cancel:hover{
+.newButton.cancel:hover{
     background-color: rgb(35, 162, 246);
 }

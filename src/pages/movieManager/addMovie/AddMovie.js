@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MovieService from "../../../service/MovieService";
 import "./addMovie.css";
 
@@ -11,6 +11,8 @@ function AddMovie() {
   const [trailer, setTrailer] = useState("");
   const [description, setDescription] = useState("");
 
+  let navigate = useNavigate();
+
   const handleAdd = () => {
     const movie = {
       name: name,
@@ -20,7 +22,7 @@ function AddMovie() {
       trailer: trailer,
       description: description,
     };
-    console.log(movie);
+    // console.log(movie);
     MovieService.create(movie)
       .then((res) => {
         console.log(res.data);
@@ -28,12 +30,16 @@ function AddMovie() {
       .catch((error) => {
         console.log(error);
       });
+    alert(
+      `Bạn đã thêm phim mới: ${name} thành công và quay về trang danh sách phim`
+    );
+    navigate("/movies");
   };
   return (
     <div className="addMovie">
       <h2>New Movie</h2>
-      <form className="newMovieForm">
-        <div className="newMovieItem">
+      <form className="newForm">
+        <div className="newItem">
           <label>Movie Name:</label>
           <input
             type="text"
@@ -43,7 +49,7 @@ function AddMovie() {
             required
           />
         </div>
-        <div className="newMovieItem">
+        <div className="newItem">
           <label>director:</label>
           <input
             type="text"
@@ -53,7 +59,7 @@ function AddMovie() {
             required
           />
         </div>
-        <div className="newMovieItem">
+        <div className="newItem">
           <label>duration:</label>
           <input
             type="text"
@@ -63,7 +69,7 @@ function AddMovie() {
             required
           />
         </div>
-        <div className="newMovieItem">
+        <div className="newItem">
           <label>Start date:</label>
           <input
             type="text"
@@ -73,7 +79,7 @@ function AddMovie() {
             required
           />
         </div>
-        <div className="newMovieItem">
+        <div className="newItem">
           <label>Link trailer:</label>
           <input
             type="text"
@@ -83,7 +89,7 @@ function AddMovie() {
             required
           />
         </div>
-        <div className="newMovieItem">
+        <div className="newItem">
           <label>description:</label>
           <textarea
             rows="9"
@@ -94,10 +100,10 @@ function AddMovie() {
             required
           />
         </div>
-        <button className="newMovieButton" onClick={handleAdd}>
+        <button className="newButton" onClick={handleAdd}>
           Create
         </button>
-        <Link to={"/movies"} className="newMovieButton cancel">
+        <Link to={"/movies"} className="newButton cancel">
           Cancel
         </Link>
       </form>

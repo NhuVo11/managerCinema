@@ -9,6 +9,8 @@ import { Route, Routes } from "react-router-dom";
 import MovieEdit from "./pages/movieManager/mobieEdit/MovieEdit";
 import AddMovie from "./pages/movieManager/addMovie/AddMovie";
 import RoomList from "./pages/RoomManager/roomList/RoomList";
+import AddRoom from "./pages/RoomManager/addRoom/AddRoom";
+import RoomEdit from "./pages/RoomManager/editRoom/RoomEdit";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/movies/add" element={<AddMovie />} />
 
           <Route path="/rooms" element={<RoomList />} />
+          <Route path="/rooms/edit/:id" element={<RoomEdit />} />
+          <Route path="/rooms/add" element={<AddRoom />} />
         </Routes>
       </div>
     </div>

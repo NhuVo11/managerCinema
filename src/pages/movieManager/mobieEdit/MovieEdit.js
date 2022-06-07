@@ -13,14 +13,6 @@ function MovieEdit() {
       getMovie(id);
     }
   }, [id]);
-
-  // const onChangeName = (e) => {
-  //   setMovies({
-  //     ...movie,
-  //     name: e.target.value,
-  //   });
-  // };
-
   const getMovie = (id) => {
     MovieService.get(id)
       .then((res) => {
@@ -29,14 +21,13 @@ function MovieEdit() {
       })
       .catch((e) => console.log(e));
   };
-  console.log(movie);
   return (
     <>
       {movie ? (
         <div className="movieEdit">
           <h2>Update Movie</h2>
-          <form className="newMovieForm">
-            <div className="newMovieItem">
+          <form className="newForm">
+            <div className="newItem">
               <label>Movie Name:</label>
               <input
                 type="text"
@@ -44,7 +35,7 @@ function MovieEdit() {
                 value={movie.name}
               />
             </div>
-            <div className="newMovieItem">
+            <div className="newItem">
               <label>director:</label>
               <input
                 type="text"
@@ -52,11 +43,11 @@ function MovieEdit() {
                 value={movie.director}
               />
             </div>
-            <div className="newMovieItem">
+            <div className="newItem">
               <label>duration:</label>
               <input type="text" placeholder="109" value={movie.duration} />
             </div>
-            <div className="newMovieItem">
+            <div className="newItem">
               <label>Start date":</label>
               <input
                 type="text"
@@ -64,7 +55,7 @@ function MovieEdit() {
                 value={movie.startDate}
               />
             </div>
-            <div className="newMovieItem">
+            <div className="newItem">
               <label>Link trailer:</label>
               <input
                 type="text"
@@ -72,7 +63,7 @@ function MovieEdit() {
                 placeholder="https://media.lottecinemavn.com/Media/MovieFile/MovieMedia/202205/10882_301_100001.mp4"
               />
             </div>
-            <div className="newMovieItem">
+            <div className="newItem">
               <label>description:</label>
               <textarea
                 rows="9"
@@ -81,8 +72,8 @@ function MovieEdit() {
                 placeholder="Nobita tình cờ gặp được người ngoài hành tinh tí hon Papi...."
               />
             </div>
-            <button className="newMovieButton">Update</button>
-            <Link to={"/movies"} className="newMovieButton cancel">
+            <button className="newButton">Update</button>
+            <Link to={"/movies"} className="newButton cancel">
               Cancel
             </Link>
           </form>
