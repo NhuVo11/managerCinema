@@ -37,7 +37,10 @@ function RoomList() {
                   <td>{room.id}</td>
                   <td>{room.name}</td>
                   <td>
-                    <Link to={"/rooms/seats"} className="navLink">
+                    <Link
+                      to={"/rooms/" + room.id + "/seats"}
+                      className="navLink"
+                    >
                       Danh sách ghế {room.name}
                     </Link>
                   </td>

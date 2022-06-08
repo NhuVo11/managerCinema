@@ -6,9 +6,6 @@ import "./roomEdit.css";
 function RoomEdit() {
   let { id } = useParams();
   const [room, setRoom] = useState(null);
-
-  //   let navigate = useNavigate();
-
   useEffect(() => {
     console.log(id);
     if (id) {
@@ -34,6 +31,7 @@ function RoomEdit() {
               <label>Room Name:</label>
               <input type="text" placeholder="Phòng 3" value={room.name} />
             </div>
+            <div className="newItem"></div>
             <button className="newButton">Update</button>
             <Link to={"/rooms"} className="newButton cancel">
               Cancel

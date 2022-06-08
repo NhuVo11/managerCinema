@@ -11,6 +11,9 @@ import AddMovie from "./pages/movieManager/addMovie/AddMovie";
 import RoomList from "./pages/RoomManager/roomList/RoomList";
 import AddRoom from "./pages/RoomManager/addRoom/AddRoom";
 import RoomEdit from "./pages/RoomManager/editRoom/RoomEdit";
+import SeatList from "./pages/seatManager/seatList/SeatList";
+import AddSeat from "./pages/seatManager/addSeatByRoom/AddSeat";
+import EditSeat from "./pages/seatManager/editSeat/EditSeat";
 
 function App() {
   return (
@@ -29,6 +32,10 @@ function App() {
           <Route path="/rooms" element={<RoomList />} />
           <Route path="/rooms/edit/:id" element={<RoomEdit />} />
           <Route path="/rooms/add" element={<AddRoom />} />
+
+          <Route path="/rooms/:id/seats" element={<SeatList />} />
+          <Route path="/rooms/:id/seats/add" element={<AddSeat />} />
+          <Route path="/seat/edit/:id" element={<EditSeat />} />
         </Routes>
       </div>
     </div>
