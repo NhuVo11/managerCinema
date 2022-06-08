@@ -5,12 +5,12 @@ import "./roomList.css";
 
 function RoomList() {
   const [rooms, setRooms] = useState([]);
-  const getAllMovies = () => {
+  const getAllRoom = () => {
     RoomService.getAll().then((res) => setRooms(res.data));
   };
 
   useEffect(() => {
-    getAllMovies();
+    getAllRoom();
   }, []);
   return (
     <div className="roomList">

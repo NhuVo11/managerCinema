@@ -57,6 +57,17 @@ function Sidebar() {
                 Rooms
               </li>
             </Link>
+            <Link to="/moviesList" className="navLink">
+              <li
+                onClick={() => setActive(5)}
+                className={`sidebarListItem ${active === 5 ? "active" : ""}`}
+              >
+                <span className="sidebarIcon">
+                  <i className="bi bi-calendar-week"></i>
+                </span>
+                Schedule
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
