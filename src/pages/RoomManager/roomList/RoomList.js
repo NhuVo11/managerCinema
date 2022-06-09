@@ -5,6 +5,18 @@ import "./roomList.css";
 
 function RoomList() {
   const [rooms, setRooms] = useState([]);
+
+  const handleRemove = (id) => {
+    RoomService.remove(id)
+      .then((res) => {
+        getAllRoom();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    alert("Xóa thành công!");
+  };
+
   const getAllRoom = () => {
     RoomService.getAll().then((res) => setRooms(res.data));
   };
@@ -12,6 +24,7 @@ function RoomList() {
   useEffect(() => {
     getAllRoom();
   }, []);
+
   return (
     <div className="roomList">
       <h2>Room List</h2>
@@ -50,7 +63,10 @@ function RoomList() {
                         <i className="bi bi-pencil-square"></i>
                       </span>
                     </Link>
-                    <span className="ActionIcon deleteAction">
+                    <span
+                      className="ActionIcon deleteAction"
+                      onClick={() => handleRemove(room.id)}
+                    >
                       <i className="bi bi-trash"></i>
                     </span>
                   </td>

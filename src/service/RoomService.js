@@ -9,10 +9,18 @@ const get = (id) => {
 const create = (data) => {
   return http.post("/rooms", data);
 };
+const update = (id, data) => {
+  return http.put(`/rooms/${id}`, data);
+};
+const remove = (id) => {
+  return http.delete(`/rooms/${id}`);
+};
 const RoomService = {
   getAll,
   get,
   create,
+  update,
+  remove,
 };
 
 export default RoomService;
