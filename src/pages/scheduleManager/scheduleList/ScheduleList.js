@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import moment from "moment";
 import ScheduleService from "../../../service/ScheduleService";
 import "./scheduleList.css";
 
@@ -36,8 +35,9 @@ function ScheduleList() {
               </Link>
             </th>
             <th>id</th>
-            <th>Date</th>
-            <th>Time</th>
+            <th>Date Time</th>
+            <th>Room</th>
+            <th>Tickets List</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -48,7 +48,15 @@ function ScheduleList() {
                   <td></td>
                   <td>{schedule.id}</td>
                   <td>{schedule.datetime}</td>
-                  <td>{moment(schedule.datetime).format("hh:mm")}</td>
+                  <td>{schedule.room.name}</td>
+                  <td>
+                    <Link
+                      to={"/shedules/" + schedule.id + "/tickets"}
+                      className="navLink"
+                    >
+                      Xem danh sách vé
+                    </Link>
+                  </td>
                   <td>
                     <Link to={"/shedules/edit/" + schedule.id}>
                       <span className="ActionIcon editAction">

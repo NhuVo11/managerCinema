@@ -12,15 +12,12 @@ function Topbar() {
         </div>
         <div className="topRight">
           <div className="toparIconContainer">
-            <i className="bi bi-bell-fill"></i>
+            <i className="bi bi-bell"></i>
             <span className="topiconBag">2</span>
           </div>
           <div className="toparIconContainer">
-            <i className="bi bi-gear-fill"></i>
+            <i className="bi bi-box-arrow-right"></i>
           </div>
-          <span className="topAvatar">
-            <i className="bi bi-person-circle"></i>
-          </span>
         </div>
       </div>
     </div>

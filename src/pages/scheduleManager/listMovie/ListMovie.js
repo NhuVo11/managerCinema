@@ -21,7 +21,7 @@ function ScheduleList() {
           <tr>
             <th>id</th>
             <th>Name</th>
-            <th>Lịch chiếu</th>
+            <th>Schedule</th>
           </tr>
         </thead>
         <tbody>

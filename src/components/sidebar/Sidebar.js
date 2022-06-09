@@ -32,7 +32,7 @@ function Sidebar() {
                 <span className="sidebarIcon">
                   <i className="bi bi-person"></i>
                 </span>
-                User
+                Users
               </li>
             </Link>
             <Link to="/movies" className="navLink">
@@ -43,7 +43,7 @@ function Sidebar() {
                 <span className="sidebarIcon">
                   <i className="bi bi-film"></i>
                 </span>
-                Movie
+                Movies
               </li>
             </Link>
             <Link to="/rooms" className="navLink">
@@ -65,7 +65,7 @@ function Sidebar() {
                 <span className="sidebarIcon">
                   <i className="bi bi-calendar-week"></i>
                 </span>
-                Schedule
+                Schedules
               </li>
             </Link>
           </ul>
