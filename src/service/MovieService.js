@@ -9,10 +9,18 @@ const get = (id) => {
 const create = (data) => {
   return http.post("/movies", data);
 };
+const update = (id, data) => {
+  return http.put(`/movies/${id}`, data);
+};
+const remove = (id) => {
+  return http.delete(`/movies/${id}`);
+};
 const MovieService = {
   getAll,
   get,
   create,
+  update,
+  remove,
 };
 
 export default MovieService;

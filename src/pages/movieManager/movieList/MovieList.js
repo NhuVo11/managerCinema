@@ -14,6 +14,16 @@ function MovieList() {
     getAllMovies();
   }, []);
 
+  const handleRemove = (id) => {
+    MovieService.remove(id)
+      .then((res) => {
+        getAllMovies();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    alert("Xóa thành công!");
+  };
   return (
     <div className="movieList">
       <h2>Movie List</h2>
@@ -47,7 +57,10 @@ function MovieList() {
                         <i className="bi bi-pencil-square"></i>
                       </span>
                     </Link>
-                    <span className="ActionIcon deleteAction">
+                    <span
+                      className="ActionIcon deleteAction"
+                      onClick={() => handleRemove(movie.id)}
+                    >
                       <i className="bi bi-trash"></i>
                     </span>
                   </td>
